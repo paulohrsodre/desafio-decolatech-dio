@@ -1,0 +1,3 @@
+## Desafios de Javascript ##
+
+Este pasta conterá os desafios de JavaScript, referentes ao Desafio Decola Tech 3a edição da DIO.
