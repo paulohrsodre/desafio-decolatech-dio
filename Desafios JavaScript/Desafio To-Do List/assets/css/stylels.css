@@ -1,0 +1,126 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #808080;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--dark);
+    font: bold 2rem 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+
+.titulo {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: var(--light);
+    background-color: var(--darkest);
+    box-shadow: 1px 1px 5px var(--darker);
+    border-radius: 10px;
+}
+
+section {
+    width: 100%;
+}
+
+section .novo_item {
+    display: flex;
+    background-color: var(--darker);
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 1px 1px 5px var(--darkest);
+    border-radius: 10px;
+    font: inherit;
+    margin-bottom: 15px;
+}
+
+.novo_item .incluir_item {
+    background-color: var(--darker);
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+    color: var(--light);
+}
+
+.novo_item input::placeholder {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.todo_list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .todo_list .todo_item {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 1px 5px var(--darker);
+    border-radius: 10px;
+    color: var(--light);
+}
+
+.todo_item div {
+    width: 80%;
+}
+
+.todo_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--darkest);
+    color: var(--light);
+}
+
+.todo_item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo_item > input[type='button'],
+.todo_item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.todo_item > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+}
