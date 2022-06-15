@@ -104,7 +104,7 @@ section .todo_list .todo_item {
 .todo_item:hover {
     cursor: pointer;
     transition: all .5s ease;
-    background-color: var(--darkest);
+    background-color: var(--darkest);  
     color: var(--light);
 }
 

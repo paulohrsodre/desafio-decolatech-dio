@@ -1,7 +1,9 @@
 'use strict'
 
+let tarefas = [];
+
 const getTarefas = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
-const setTaferas = (tarefas) => localStorage.setItem('todoList', JSON.stringify(tarefas)); 
+const setTarefas = (tarefas) => localStorage.setItem('todoList', JSON.stringify(tarefas)); 
 
 const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label');
@@ -33,7 +35,7 @@ const adicionarItem = (evento) => {
     if(tecla === 'Enter') {
         const tarefas = getTarefas();
         tarefas.push({'tarefa': texto, 'status': ''});
-        setTaferas(tarefas)
+        setTarefas(tarefas)
         atualizarTela();
         evento.target.value = '';
     }
@@ -42,14 +44,14 @@ const adicionarItem = (evento) => {
 const removerItem = (indice) => {
     const tarefas = getTarefas();
     tarefas.splice(indice, 1);
-    setTaferas(tarefas)
+    setTarefas(tarefas);
     atualizarTela();
 }
 
 const atualizarItem = (indice) => {
     const tarefas = getTarefas();
     tarefas[indice].status = tarefas[indice].status === '' ? 'checked' : '';
-    getTarefas(tarefas);
+    setTarefas(tarefas);
     atualizarTela();
 }
 
